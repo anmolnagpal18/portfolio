@@ -1,0 +1,86 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ─── Theme Transition ─────────────────────────────── */
+html {
+  scroll-behavior: auto;
+}
+
+*, *::before, *::after {
+  transition: background-color 0.4s ease, border-color 0.4s ease, box-shadow 0.4s ease;
+}
+
+/* ─── CSS Variables ────────────────────────────────── */
+:root {
+  --bg-page:       #ffffff;
+  --bg-section:    #f9fafb;
+  --bg-card:       #ffffff;
+  --text-primary:  #000000;
+  --text-muted:    #6b7280;
+  --text-heading:  #000000;
+  --border:        #e5e7eb;
+  --nav-bg:        rgba(255,255,255,0.9);
+  --scrollbar-bg:  #f7f8fa;
+  --scrollbar-thumb: #e5e7eb;
+}
+
+html.dark {
+  --bg-page:       #0a0a0a;
+  --bg-section:    #111111;
+  --bg-card:       #1a1a1a;
+  --text-primary:  #f1f5f9;
+  --text-muted:    #94a3b8;
+  --text-heading:  #f8fafc;
+  --border:        #2a2a2a;
+  --nav-bg:        rgba(10,10,10,0.92);
+  --scrollbar-bg:  #111111;
+  --scrollbar-thumb: #2a2a2a;
+}
+
+/* ─── Body base ────────────────────────────────────── */
+body {
+  background-color: var(--bg-page);
+  color: var(--text-primary);
+}
+
+/* ─── Lenis ─────────────────────────────────────────── */
+html.lenis, html.lenis body { height: auto; }
+.lenis.lenis-smooth { scroll-behavior: auto !important; }
+.lenis.lenis-smooth [data-lenis-prevent] { overscroll-behavior: contain; }
+.lenis.lenis-stopped { overflow: hidden; }
+.lenis.lenis-scrolling iframe { pointer-events: none; }
+
+/* ─── Base Typography ─────────────────────────────── */
+@layer base {
+  body { @apply font-sans; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
+  h1, h2, h3, h4, h5, h6 { @apply font-display font-medium; }
+}
+
+/* ─── Font Classes ─────────────────────────────────── */
+.bricolage-grotesque-custom {
+  font-family: var(--font-bricolage), sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  font-variation-settings: "wdth" 100;
+}
+.google-sans-custom {
+  font-family: var(--font-google-sans), sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  font-variation-settings: "GRAD" 0;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+/* ─── Scrollbar ─────────────────────────────────────── */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: var(--scrollbar-bg); }
+::-webkit-scrollbar-thumb { background: var(--scrollbar-thumb); border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: #9ca3af; }
+
+/* ─── Selection ─────────────────────────────────────── */
+::selection { background: rgba(190,253,74,0.25); color: inherit; }
+
+/* ─── Dark mode card utility ─────────────────────────── */
+.dark .shadow-soft { box-shadow: 0 2px 16px rgba(0,0,0,0.4); }

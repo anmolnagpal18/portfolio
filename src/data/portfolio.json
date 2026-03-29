@@ -1,0 +1,233 @@
+{
+  "profile": {
+    "name": "Anmol Nagpal",
+    "title": "Full-stack & Design Hybrid",
+    "bio": "Blending engineering precision with design intuition to build high-performance digital ecosystems.",
+    "heroImage": "/hero_anmol_transparent.png",
+    "experienceImage": "/anmol-removebg-preview.png",
+    "cvPath": "/Anmol_Nagpal_CV.pdf"
+  },
+  "skills": [
+    {
+      "category": "Languages",
+      "items": [
+        "Python",
+        "C",
+        "JavaScript",
+        "PHP",
+        "Dart",
+        "HTML & CSS"
+      ]
+    },
+    {
+      "category": "Frameworks & Libs",
+      "items": [
+        "React",
+        "Django",
+        "Next.js",
+        "TailwindCSS",
+        "Flutter",
+        "Bootstrap"
+      ]
+    },
+    {
+      "category": "Databases & Tools",
+      "items": [
+        "MySQL",
+        "PostgreSQL",
+        "XAMPP",
+        "Git",
+        "OpenAI API",
+        "Postman"
+      ]
+    },
+    {
+      "category": "Soft Skills",
+      "items": [
+        "Problem-Solving",
+        "Team Player",
+        "Adaptability",
+        "Communication"
+      ]
+    }
+  ],
+  "about": {
+    "quote": "When does a man die? When he is hit by a bullet? No! When he suffers a disease? No! When he ate a soup made out of a poisonous mushroom? No! A man dies when he is forgotten!",
+    "greeting": "Hallo!",
+    "focus": "my focus is on blending engineering precision, thoughtful design, and AI-driven logic to architect high-performance digital ecosystems",
+    "marqueeRoles": ["FULL-STACK DEVELOPER", "UI/UX DESIGNER", "PRODUCT ENGINEER"]
+  },
+  "projects": [
+    {
+      "id": "quizzer",
+      "image": "/uploads/1774721709543-Screenshot-2024-09-10-184737.png",
+      "title": "Quizzer - Updated",
+      "tagline": "Intelligent Quiz Management SystemTesting sorting and visibility logic.",
+      "tags": [
+        "React",
+        "Python",
+        "AIReact",
+        "TypeScript"
+      ],
+      "description": "AI-powered quiz platform featuring leaderboards, AI-generated tests, AI chat for preparation, quiz history, and AI-driven advice.This is a test project intended to verify that the projects are correctly sorted by date and that the 'View More' functionality works as expected.",
+      "liveLink": "#Test Project",
+      "githubLink": "https://github.com/anmhttps://github.com/anmolnagpal18/test-projectolnagpal18/Intelligent-Quiz-Management-System-with-Auto-Generated-Questions",
+      "date": "April 2026"
+    },
+    {
+      "id": "prep-ai",
+      "image": "/Screenshot 2026-03-28 223112.png",
+      "title": "Prep-AI",
+      "tagline": "AI-Driven Placement Preparation",
+      "tags": [
+        "React",
+        "Django",
+        "Tailwind CSS",
+        "OpenAI"
+      ],
+      "description": "Personalized placement prep with mock interviews, smart coding tests, and AI voice interaction (STT/TTS).",
+      "liveLink": "https://placement-portal-ai.vercel.app/",
+      "githubLink": "https://github.com/anmolnagpal18"
+    },
+    {
+      "id": "duke-dawn",
+      "image": "/Screenshot 2026-03-28 223447.png",
+      "title": "DUKE & DAWN",
+      "tagline": "3D E-Commerce Experience",
+      "tags": [
+        "React",
+        "Node.js",
+        "Three.js",
+        "Tailwind CSS"
+      ],
+      "description": "Modern streetwear SPA featuring interactive 3D product visualization and a custom RESTful inventory API.",
+      "liveLink": "https://duke-dawn.vercel.app/",
+      "githubLink": "https://github.com/anmolnagpal18"
+    },
+    {
+      "id": "ecommerce",
+      "image": "/Screenshot 2026-03-28 223803.png",
+      "title": "E-Commerce Website",
+      "tagline": "Full-Stack Clothing Platform",
+      "tags": [
+        "PHP",
+        "HTML",
+        "CSS",
+        "MySQL"
+      ],
+      "description": "Complete e-commerce ecosystem with a custom PHP admin dashboard and secure checkout flow.",
+      "liveLink": "https://github.com/anmolnagpal18",
+      "githubLink": "https://github.com/anmolnagpal18"
+    },
+    {
+      "id": "1774724206244",
+      "title": "New Project",
+      "tagline": "Tagline",
+      "tags": [],
+      "description": "",
+      "liveLink": "#",
+      "githubLink": "https://github.com/anmolnagpal18",
+      "image": "/project_learning.png",
+      "date": "Present"
+    }
+  ],
+  "experience": [
+    {
+      "company": "Infosys Springboard 6.0",
+      "type": "Industry",
+      "status": "Running",
+      "role": "Full-stack Intern",
+      "period": "March 2026 — Present",
+      "description": "Currently doing internship in infosys spring board 6.0, focusing on building high-performance web applications and AI integration.",
+      "link": "https://springboard.india.infosys.com/"
+    },
+    {
+      "company": "Flutter & Dart (Training)",
+      "type": "Training",
+      "status": "Completed",
+      "role": "Mobile App Developer",
+      "period": "June 2025 — July 2025",
+      "description": "Developed a cross-platform music streaming app (Spotify Clone) using Flutter, Dart, and Provider for state management.",
+      "link": "https://springboard.india.infosys.com/"
+    },
+    {
+      "company": "TRAX NGO",
+      "type": "Internship",
+      "status": "Completed",
+      "role": "Road Safety Awareness Intern",
+      "period": "August 2025",
+      "description": "Conducted community outreach and awareness drives focusing on road safety measures and public education.",
+      "link": "https://traxngo.org/"
+    }
+  ],
+  "education": [
+    {
+      "school": "Lovely Professional University",
+      "type": "Academic",
+      "status": "Running",
+      "degree": "B.Tech Computer Science & Engineering",
+      "period": "August 2023 — Present",
+      "details": "CGPA: 7.14"
+    },
+    {
+      "school": "GTB 3rd Centenary Public School",
+      "type": "Completed",
+      "status": "Completed",
+      "degree": "Intermediate (PCM)",
+      "period": "April 2022 — March 2023",
+      "details": "Percentage: 70%"
+    },
+    {
+      "school": "GTB 3rd Centenary Public School",
+      "type": "Completed",
+      "status": "Completed",
+      "degree": "Matriculation",
+      "period": "April 2020 — March 2021",
+      "details": "Percentage: 65%"
+    }
+  ],
+  "certifications": [
+    {
+      "title": "Backend Development",
+      "issuer": "Physics Wallah",
+      "date": "December 2025",
+      "link": "https://www.pw.live/"
+    },
+    {
+      "title": "Master Generative AI & Generative AI tools",
+      "issuer": "Udemy",
+      "date": "May' 24",
+      "link": "#"
+    },
+    {
+      "title": "The Complete Python Developer",
+      "issuer": "Udemy",
+      "date": "Apr' 24",
+      "link": "#"
+    },
+    {
+      "title": "Mastering in C: Basic to Beyond",
+      "issuer": "CSE Pathshala",
+      "date": "Mar' 24",
+      "link": "#"
+    },
+    {
+      "title": "New Certificate",
+      "issuer": "Issuer",
+      "date": "Month Year",
+      "link": "#"
+    },
+    {
+      "title": "New Certificate",
+      "issuer": "Issuer",
+      "date": "Month Year",
+      "link": "#"
+    },
+    {
+      "title": "New Certificate",
+      "issuer": "Issuer",
+      "date": "Month Year",
+      "link": "#"
+    }
+  ]
+}
