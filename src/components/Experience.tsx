@@ -3,6 +3,7 @@ import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import Image from "next/image";
 import ParallaxLayer from "./ParallaxLayer";
+import { fetchCachedPortfolio } from "@/lib/fetchCachedPortfolio";
 
 interface ExperienceItem {
   company: string;

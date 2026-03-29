@@ -3,6 +3,7 @@ import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import ScrollReveal from "./ScrollReveal";
 import ParallaxLayer from "./ParallaxLayer";
+import { fetchCachedPortfolio } from "@/lib/fetchCachedPortfolio";
 
 const leftTags = [
   { label: "Frontend: React & TS", color: "#61DAFB" },

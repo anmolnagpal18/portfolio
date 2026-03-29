@@ -2,6 +2,7 @@
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import ParallaxLayer from "./ParallaxLayer";
+import { fetchCachedPortfolio } from "@/lib/fetchCachedPortfolio";
 
 interface Certification {
   title: string;

@@ -3,6 +3,7 @@ import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import Image from "next/image";
 import CircularText from "./CircularText";
+import { fetchCachedPortfolio } from "@/lib/fetchCachedPortfolio";
 
 const DEFAULT_PROFILE = {
   name: "Anmol Nagpal",

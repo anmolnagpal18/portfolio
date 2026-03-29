@@ -1,6 +1,7 @@
 "use client";
 import { useState, useEffect } from "react";
 import ScrollVelocity from "./ScrollVelocity";
+import { fetchCachedPortfolio } from "@/lib/fetchCachedPortfolio";
 
 const DEFAULT_ROLES = ["FULL-STACK DEVELOPER", "UI/UX DESIGNER", "PRODUCT ENGINEER"];
 
