@@ -111,8 +111,13 @@ export async function POST(req: Request) {
         `,
       };
 
-      // Fire and forget
-      transporter.sendMail(mailOptions).catch(err => console.error('Email error:', err));
+      // Serverless environments require us to await background tasks
+      try {
+        await transporter.sendMail(mailOptions);
+        console.log('Notification email sent successfully');
+      } catch (err) {
+        console.error('Email error:', err);
+      }
     }
 
     return NextResponse.json({ message: 'Message sent successfully' });
