@@ -586,7 +586,9 @@ export default function AdminDashboard() {
                              </label>
                              {p.image && (
                                <div className="flex items-center gap-3 bg-white/5 px-4 py-2 rounded-xl border border-white/5">
-                                 <span className="text-[10px] text-gray-400 font-mono truncate max-w-[200px]">{p.image}</span>
+                                 <span className="text-[10px] text-gray-400 font-mono truncate max-w-[200px]">
+                                   {p.image.length > 40 ? p.image.substring(0, 40) + '... (Base64 WebP)' : p.image}
+                                 </span>
                                  <div className="w-8 h-8 rounded-md overflow-hidden relative border border-white/10">
                                    <img src={p.image} alt="Preview" className="object-cover w-full h-full" />
                                  </div>
