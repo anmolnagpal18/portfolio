@@ -43,7 +43,7 @@ export async function GET() {
 // Update portfolio data (Admin only)
 export async function POST(request: Request) {
   try {
-    const { password, data } = await request.json();
+    const { password, data }: { password?: string; data?: any } = await request.json();
 
     // Simple password check
     if (password !== (process.env.ADMIN_PASSWORD || 'anmol123')) {
