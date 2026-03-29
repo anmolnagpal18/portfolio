@@ -48,10 +48,60 @@ export default function AdminDashboard() {
 
   const fileToBase64 = (file: File): Promise<string> => {
     return new Promise((resolve, reject) => {
+      // 1. If it's not an image (e.g. PDF CV), just read it directly (with a warning if it's over 4MB)
+      if (!file.type.startsWith('image/')) {
+        if (file.size > 4 * 1024 * 1024) {
+          alert('Warning: This PDF is larger than 4MB and may be rejected by the server! Please compress your PDF first.');
+        }
+        const reader = new FileReader();
+        reader.readAsDataURL(file);
+        reader.onload = () => resolve(reader.result as string);
+        reader.onerror = error => reject(error);
+        return;
+      }
+
+      // 2. If it IS an image, compress it aggressively using Canvas to prevent 413 Server Errors
       const reader = new FileReader();
+      reader.onload = (e) => {
+        const img = new Image();
+        img.onload = () => {
+          const MAX_WIDTH = 1200;
+          const MAX_HEIGHT = 1200;
+          let width = img.width;
+          let height = img.height;
+
+          // Calculate new dimensions while maintaining aspect ratio
+          if (width > height) {
+            if (width > MAX_WIDTH) {
+              height *= MAX_WIDTH / width;
+              width = MAX_WIDTH;
+            }
+          } else {
+            if (height > MAX_HEIGHT) {
+              width *= MAX_HEIGHT / height;
+              height = MAX_HEIGHT;
+            }
+          }
+
+          const canvas = document.createElement('canvas');
+          canvas.width = width;
+          canvas.height = height;
+          const ctx = canvas.getContext('2d');
+          
+          // Draw the compressed image
+          ctx?.drawImage(img, 0, 0, width, height);
+          
+          // Output as highly optimized WebP format (0.7 quality)
+          // This typically shrinks 8MB photos down to ~150KB!
+          const compressedBase64 = canvas.toDataURL('image/webp', 0.7);
+          resolve(compressedBase64);
+        };
+        img.onerror = err => reject(err);
+        img.src = e.target?.result as string;
+      };
+      
+      reader.onerror = err => reject(err);
       reader.readAsDataURL(file);
-      reader.onload = () => resolve(reader.result as string);
-      reader.onerror = error => reject(error);
     });
   };
 
