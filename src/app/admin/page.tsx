@@ -84,10 +84,13 @@ export default function AdminDashboard() {
   const handleSave = async () => {
     setIsSaving(true);
     try {
+      // Send only the data for the current tab to prevent "413 Payload Too Large" error
+      const payloadData = { [activeTab]: data[activeTab] };
+      
       const res = await fetch('/api/portfolio', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ password, data }),
+        body: JSON.stringify({ password, data: payloadData }),
       });
       const result = await res.json();
       if (res.ok) {
@@ -812,7 +815,7 @@ export default function AdminDashboard() {
             {activeTab === 'certifications' && (
               <div className="space-y-12">
                 <div className="flex justify-between items-center mb-4">
-                  <h2 className="text-2xl font-bold italic font-display text-primary">Cerifications</h2>
+                  <h2 className="text-2xl font-bold italic font-display text-primary">Certifications</h2>
                   <button 
                     onClick={() => setData({...data, certifications: [...data.certifications, { title: "New Certificate", issuer: "Issuer", date: "Month Year", link: "#" }]})}
                     className="text-xs font-bold uppercase tracking-widest border border-primary/30 px-4 py-2 rounded-full hover:bg-primary/10 transition-all text-white"
