@@ -590,7 +590,14 @@ export default function AdminDashboard() {
                                    {p.image.length > 40 ? p.image.substring(0, 40) + '... (Base64 WebP)' : p.image}
                                  </span>
                                  <div className="w-8 h-8 rounded-md overflow-hidden relative border border-white/10">
-                                   <img src={p.image} alt="Preview" className="object-cover w-full h-full" />
+                                   {p.image.length > 500000 ? (
+                                      <div className="w-full h-full bg-red-500/20 flex flex-col items-center justify-center text-[8px] text-red-500 text-center font-bold px-1">
+                                        <span>HUGE</span>
+                                        <span>FILE</span>
+                                      </div>
+                                   ) : (
+                                      <img src={p.image} alt="Preview" className="object-cover w-full h-full" />
+                                   )}
                                  </div>
                                </div>
                              )}
